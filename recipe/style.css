@@ -1,0 +1,84 @@
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    border-left: 5px solid orange;
+    padding: 5px;
+}
+
+h2 {
+    border-left: 5px solid blue;
+    padding: 5px;
+}
+
+* {
+    border-radius: 3px;
+}
+
+.historySection {
+    position: relative;
+}
+
+.historyContent {
+    position: absolute;
+    left: 160px;
+    bottom: 2px;
+}
+
+video {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid grey;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+.recipe {
+    position: relative;
+}
+
+.directions {
+    border: 1px solid black;
+    position: absolute;
+    left: 430px;
+    top: 0px;
+    padding: 5px;
+    height: 510px;
+}
+
+.directions img {
+    height: 200px;
+}
+
+.ingredients {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 5px;
+    position: relative;
+}
+
+.recipe {
+    margin-top: 50px;
+}
+
+.historySection {
+    margin-top: 50px;
+}
+
+.historySection img {
+    margin-bottom: 30px;
+}
+

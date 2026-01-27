@@ -1,0 +1,9 @@
+* {
+    padding: 2px;
+}
+
+video {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+}
