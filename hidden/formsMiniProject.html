@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    body {
+      font-family: verdana;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mini Project</h1>
+  <form>
+    <label>Select a building type</label><br>
+    <input type="radio" name="bldgType" value="apartment">Apartment<br>
+    <input type="radio" name="bldgType" value="house">House<br>
+    <input type="radio" name="bldgType" value="mansion">Mansion<br>
+    <input type="radio" name="bldgType" value="townhome">Townhome<br><br>
+    
+    <label>Select the rooms you want inside of your building</label><br>
+    <input type="checkbox" class="room" value="bedroom">Bedroom<br>
+    <input type="checkbox" class="room" value="bathroom">Bathroom<br>
+    <input type="checkbox" class="room" value="living room">Living Room<br>
+    <input type="checkbox" class="room" value="kitchen">Kitchen<br>
+    <input type="checkbox" class="room" value="dining room">Dining Room<br>
+    <input type="checkbox" class="room" value="library">Library<br>
+    <input type="checkbox" class="room" value="bowling alley">Bowling Alley<br><br>
+    
+    <button type="button" onclick="handleForm()">Submit</button>
+  </form>
+  <br><br>
+  
+  <p id="outputPara"></p>
+  
+  <script>
+  function handleForm() {
+    //define variables
+      //for radio question
+        let bldgTypes = document.getElementsByName("bldgType");
+        let selectedBuilding = "";
+      //for checkbox question
+        let rooms = document.getElementsByClassName("room");
+        let selectedRooms = [];
+    
+    //loop for radio question
+    for(let i = 0; i < bldgTypes.length; i++){
+      if (bldgTypes[i].checked) {
+        selectedBuilding = bldgTypes[i].value;
+      }// end radio if 
+    }//end radio loop
+    
+    
+    //loop for checkbox question
+    for(let q = 0; q < rooms.length; q++) {
+      if(rooms[q].checked) {
+        selectedRooms.push(rooms[q].value);
+      }//end checkbox if
+    }//end checkbox loop
+    
+    //output
+    let msg = `You selected a(n) ${selectedBuilding} with the following rooms: ${selectedRooms}.`
+    document.getElementById("outputPara").innerHTML = msg;
+  }
+  </script>
+</body>
+</html>
